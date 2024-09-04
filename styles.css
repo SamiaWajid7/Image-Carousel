@@ -1,5 +1,5 @@
 body {
-    background-color: #333; /* Dark background color */
+    background-color: #333; 
     color: #fff;
 }
 
@@ -30,7 +30,7 @@ body {
 /* Container specifically for the image display */
 .image-container {
     position: relative;
-    height: 400px; /* Adjust height as needed */
+    height: 400px; 
     overflow: hidden;
 }
 
@@ -145,9 +145,11 @@ body {
 /* Responsive adjustments for smaller screens */
 @media screen and (max-width: 600px) {
     .image-container {
-        height: 300px; /* Reduced height for smaller screens */
+        height: 300px; 
     }
-
+    .carousel-container {
+        max-width: 80%; 
+    }
     .prev, .next {
         padding: 5px;
         font-size: 16px;
