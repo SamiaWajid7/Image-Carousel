@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="carousel-container">
+        <div class="image-container">
+            <div class="carousel">
+                <div class="carousel-item active fade">
+                    <img src="pics/Beautiful_Kaghan_Valley_Pakistan.jpg" alt="Kaghan Valley">
+                </div>
+                <div class="carousel-item fade">
+                    <img src="pics/Deosai_pic_hd.jpg" alt="Deosai">
+                </div>
+                <div class="carousel-item fade">
+                    <img src="pics/Lake-Saiful-Malook.jpg" alt="Lake Saiful Malook">
+                </div>
+                <div class="carousel-item fade">
+                    <img src="pics/Nanga_Parbat_The_Killer_Mountain.jpg" alt="Nanga Parbat">
+                </div>
+                <div class="carousel-item fade">
+                    <img src="pics/Attabad.jpg" alt="Attabad">
+                </div>
+            </div>
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+        <div class="carousel-indicators">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+            <span class="dot" data-slide="3"></span>
+            <span class="dot" data-slide="4"></span>
+        </div>
+        <button class="play-pause"><i class="fas fa-play"></i>Play</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,165 @@
+body {
+    background-color: #333; /* Dark background color */
+    color: #fff;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+/* Container for the entire carousel */
+.carousel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background: linear-gradient(135deg, #f0f0f0, #d0d0d0);  
+
+}
+
+/* Container specifically for the image display */
+.image-container {
+    position: relative;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+/* Flexbox layout for the carousel items */
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+/* Each carousel item taking full container width and height */
+.carousel-item {
+    min-width: 100%;
+    height: 100%;
+    transition: opacity 0.5s ease-in-out;
+    display: none; /* Hide all items by default */
+}
+
+.carousel-item.active {
+    display: block; /* Show only the active item */
+    animation: fade 1s ease-in-out; /* Apply fade animation */
+}
+
+/* Image styling */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling for navigation buttons */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+/* Positioning of prev and next buttons */
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+/* Indicator dots styling */
+.carousel-indicators {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Dots size and styling */
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Active dot styling */
+.dot.active {
+    background-color: #717171;
+}
+
+/* Play/Pause button styling */
+.play-pause {
+    background-color: rgba(0, 0, 0, 0.785);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.play-pause {
+    background-color: rgba(0, 0, 0, 0.785);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+.play-pause i {
+    margin-right: 5px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+    .image-container {
+        height: 300px; /* Reduced height for smaller screens */
+    }
+
+    .prev, .next {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+        margin: 0 3px;
+    }
+
+    .play-pause {
+        font-size: 12px;
+    }
+}
